@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101426">
+  <meta name="description" content="Micah AI — your personal AI assistant.">
+  <title>MICHAEL / MICAH AI</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="logo">M</div><div><strong>MICHAEL / MICAH AI</strong><small>Your personal AI</small></div></div>
+      <button class="new-chat" id="newChat">＋ <span>New chat</span></button>
+      <div class="side-label">YOUR SPACE</div>
+      <button class="side-item active">◉ <span>Chat</span></button>
+      <button class="side-item" id="imageMode">✧ <span>Create an image</span></button>
+      <div class="side-note">Your conversations will appear here when chat history is connected.</div>
+      <div class="profile"><div class="avatar">M</div><div><strong>Guest</strong><small>Preview mode</small></div></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="mobile-brand"><span class="logo small-logo">M</span><strong>MICHAEL / MICAH AI</strong></div>
+        <span class="preview">EARLY PREVIEW</span>
+      </header>
+
+      <section class="content" id="content">
+        <div class="welcome" id="welcome">
+          <div class="welcome-mark">M</div>
+          <p class="eyebrow">WELCOME TO MICAH AI</p>
+          <h1>Ask Michael <span>anything.</span></h1>
+          <p class="subheading">A new place to think, learn, create and explore.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Explain a difficult school topic in simple steps."><span>📚</span><b>Help me learn</b><small>Understand a difficult topic</small></button>
+            <button class="suggestion" data-prompt="Help me come up with a creative idea."><span>💡</span><b>Explore an idea</b><small>Think through something new</small></button>
+            <button class="suggestion" data-prompt="Help me write a clear and professional message."><span>✍️</span><b>Help me write</b><small>Make words work better</small></button>
+            <button class="suggestion" data-prompt="I want to create an image. Help me plan the prompt."><span>🎨</span><b>Create something</b><small>Start an image idea</small></button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <section class="composer-wrap">
+        <form class="composer" id="chatForm">
+          <textarea id="prompt" rows="1" placeholder="Ask Michael anything..." aria-label="Message Micah"></textarea>
+          <div class="composer-bottom">
+            <div class="tools"><button type="button" id="attachBtn" title="Image upload will be added in a later build">＋ <span>Attach</span></button><button type="button" id="voiceBtn" title="Voice will be added in a later build">♩ <span>Voice</span></button></div>
+            <button class="send" type="submit" aria-label="Send message">↑</button>
+          </div>
+        </form>
+        <p class="disclaimer">Micah AI is being built. This preview does not yet connect to an AI model.</p>
+      </section>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
